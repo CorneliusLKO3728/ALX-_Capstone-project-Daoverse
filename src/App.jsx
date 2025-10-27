@@ -1,9 +1,11 @@
 
+import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import NovelDetail from './pages/NovelDetail'
 import Profile from './pages/Profile'
 import SearchResults from './pages/SearchResults'
+import Library from './pages/Library'
 import NotFound from './pages/NotFound'
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
         <Route path="/novel/:id" element={<NovelDetail />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/search" element={<SearchResults />} />
+        <Route path="/library" element={<Library />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

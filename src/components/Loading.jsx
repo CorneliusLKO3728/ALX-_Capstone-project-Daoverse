@@ -1,4 +1,5 @@
 
+import React from 'react'
 function Loading({ message = "Loading cultivation novels...", size = "large" }) {
   const sizeClasses = {
     small: "text-4xl",

@@ -1,4 +1,5 @@
 
+import React from 'react'
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { novelService } from '../services/novelService';
@@ -6,6 +7,7 @@ import { POPULAR_TAGS } from '../utils/constants';
 import Loading from '../components/Loading';
 import ErrorMessage from '../components/ErrorMessage';
 import NovelCard from '../components/NovelCard';
+import SearchBar from '../components/SearchBar';
 
 function Home() {
   const [featuredNovels, setFeaturedNovels] = useState([]);
@@ -86,22 +88,16 @@ function Home() {
         </div>
       </section>
 
-      <section className="px-4 md:px-6 mb-8">
+     <section className="px-4 md:px-6 mb-8">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => navigate('/search')}
-            className="w-full bg-white rounded-full px-6 py-4 md:py-6 text-left text-gray-500 text-lg md:text-xl shadow-2xl hover:shadow-purple-500/30 transition"
-          >
-             Search for your scriptures here
-          </button>
-          
-          <div className="mt-4">
-            <p className="text-white text-sm md:text-lg">
-              <span className="font-bold">Tags : </span>
-              <span className="text-gray-300">{POPULAR_TAGS.join(', ')}</span>
-            </p>
-          </div>
-        </div>
+       <SearchBar />
+        <div className="mt-4">
+          <p className="text-white text-sm md:text-lg">
+           <span className="font-bold"> Search for Cultivation Techniques : </span>
+            <span className="text-gray-300">{POPULAR_TAGS.join(', ')}</span>
+          </p>
+         </div>
+       </div>
       </section>
 
       <section className="px-4 md:px-6 mb-8">

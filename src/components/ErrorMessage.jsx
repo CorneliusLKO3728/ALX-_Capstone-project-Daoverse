@@ -1,4 +1,5 @@
 
+import React from "react";
 function ErrorMessage({ error, onRetry }) {
   return (
     <div className="flex items-center justify-center min-h-[400px] px-4">
