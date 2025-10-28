@@ -1,4 +1,4 @@
-// Replace the entire src/pages/NovelDetail.jsx with:
+
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { novelService } from '../services/novelService';
